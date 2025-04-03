@@ -1,0 +1,17 @@
+name: CZRTP
+version: 1.0.3
+main: com.example.czrtp.CZRTP
+api-version: 1.21
+description: Custom Zone Random Teleport Plugin
+author: Z3R0P01NT
+
+commands:
+  czrtp:
+    description: Custom Zone Random Teleport command
+    usage: /czrtp [create <zone_name> | <zone_name> pos1/pos2/pos3/pos4 | tp <zone_name>]
+    permission: czrtp.use
+
+permissions:
+  czrtp.use:
+    description: Allows using CZRTP commands
+    default: op
