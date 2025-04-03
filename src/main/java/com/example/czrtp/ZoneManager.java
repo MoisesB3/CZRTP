@@ -10,6 +10,7 @@ import org.bukkit.entity.Player;
 
 import java.io.File;
 import java.io.IOException;
+import java.util.Collection;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Random;
@@ -150,6 +151,10 @@ public class ZoneManager {
 
     public Zone getZone(String zoneName) {
         return zones.get(zoneName);
+    }
+
+    public Collection<Zone> getAllZones() {
+        return zones.values();
     }
 
     public Location getRandomLocationInZone(String zoneName) {

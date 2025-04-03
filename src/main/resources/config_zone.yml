@@ -1,0 +1,37 @@
+# CZRTP Zone Configuration
+# This file contains configuration for teleport options for all zones
+
+# Global default settings
+# These will be used for any zone that doesn't have specific settings
+global:
+  # Teleport delay in seconds (set to 0 for instant teleport)
+  teleport_delay: 3
+
+  # Cooldown time in seconds before a player can use the same zone again
+  cooldown: 60
+
+  # Messages (supports color codes with & and placeholders)
+  # Available placeholders: {zone_name}, {delay}, {cooldown}
+  # Color code formatting:
+  # - Basic color codes: &a, &b, &c, etc.
+  # - Formatting codes: &l (bold), &o (italic), &n (underline), &k (obfuscated), &m (strikethrough)
+  # - Hex colors: &#RRGGBB format
+  message: "&aTeleporting to zone &6{zone_name}&a in &6{delay}&a seconds..."
+  cooldown_message: "&cYou must wait &6{cooldown}&c seconds before using this zone again."
+  success_message: "&aYou have been teleported to zone &6{zone_name}&a!"
+
+# Example of a fancy message using hex colors and formatting:
+# message: "&0&l&k! &#323232&l&oｅ&#424242&l&oｘ&#515151&l&oｃ&#616161&l&oｅ&#717171&l&oｌ&#818181&l&oｓ&#909090&l&oｉ&#a0a0a0&l&oｏ&#aeaeae&l&oｒ&#d6d6d6𝕂&#e4e4e4𝕀&#f1f1f1𝕋 &f&l&k!"
+
+# Zone-specific settings
+# These will override the global defaults for specific zones
+# Example:
+# zones:
+#   example_zone:
+#     teleport_delay: 5
+#     cooldown: 120
+#     message: "&#00ff00&lPreparing &oto teleport to &b&n{zone_name}&r in &e{delay}&f seconds..."
+#     cooldown_message: "&#ff0000This zone is on a &6{cooldown}&c second cooldown!"
+#     success_message: "&#1E90FF&l&oWelcome to &#00BFFF&l&n{zone_name}&#1E90FF&l&o!"
+zones:
+# Zone configurations will be added here

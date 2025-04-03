@@ -1,0 +1,38 @@
+# CZRTP Zone Configuration
+# This file contains configuration for teleport options for all zones
+
+# Global default settings
+# These will be used for any zone that doesn't have specific settings
+global:
+  # Prefix settings
+  prefix:
+    enabled: true
+    text: "[&x&0&0&0&0&0&0&l&oC&x&2&e&2&e&2&e&l&oZ&x&5&c&5&c&5&c&l&oR&x&8&9&8&9&8&9&l&oT&x&b&7&b&7&b&7&l&oP]"
+
+  # Teleport delay in seconds (set to 0 for instant teleport)
+  teleport_delay: 3
+
+  # Cooldown time in seconds before a player can use the same zone again
+  cooldown: 60
+
+  # Messages (supports color codes with & and placeholders)
+  # Available placeholders: {zone_name}, {delay}, {cooldown}, {prefix}
+  message: "{prefix} &aTeleporting to zone &6{zone_name}&a in &6{delay}&a seconds..."
+  cooldown_message: "{prefix} &cYou must wait &6{cooldown}&c seconds before using this zone again."
+  success_message: "{prefix} &aYou have been teleported to zone &6{zone_name}&a!"
+
+# Zone-specific settings
+# These will override the global defaults for specific zones
+# Example:
+# zones:
+#   example_zone:
+#     prefix:
+#       enabled: true
+#       text: "[&bCustom Zone]"
+#     teleport_delay: 5
+#     cooldown: 120
+#     message: "{prefix} &bPreparing to teleport to &3{zone_name}&b in &3{delay}&b seconds..."
+#     cooldown_message: "{prefix} &cThis zone is on a &6{cooldown}&c second cooldown!"
+#     success_message: "{prefix} &bWelcome to &3{zone_name}&b!"
+zones:
+# Zone configurations will be added here
